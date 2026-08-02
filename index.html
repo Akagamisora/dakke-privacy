@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>プライバシーポリシー / Privacy Policy — Dakke</title>
+    <meta
+      name="description"
+      content="Dakke のプライバシーポリシー。Privacy policy for the Dakke iOS app."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f5f0e7;
+        --paper: #fbf8f1;
+        --surface: #f0e9db;
+        --ink: #39342b;
+        --ink2: #5e564a;
+        --ink3: #948a78;
+        --line: rgba(57, 52, 43, 0.09);
+        --line-strong: rgba(57, 52, 43, 0.18);
+        --accent: #cf8763;
+        --accent-deep: #a05f3c;
+        --accent-soft: #f2ddce;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN",
+          "ヒラギノ丸ゴ ProN W4", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.8;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .wrap {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
+
+      header.brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 40px;
+      }
+
+      .mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 9px;
+        display: block;
+        object-fit: cover;
+        box-shadow: 0 1px 2px rgba(57, 52, 43, 0.12);
+      }
+
+      .brand-name {
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        color: var(--ink);
+      }
+
+      .lang-switch {
+        margin-left: auto;
+        display: flex;
+        gap: 8px;
+      }
+
+      .lang-switch a {
+        font-size: 12px;
+        color: var(--ink3);
+        text-decoration: none;
+        padding: 4px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+      }
+
+      .lang-switch a:hover {
+        color: var(--accent-deep);
+        border-color: var(--accent);
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 500;
+        margin: 0 0 8px;
+        color: var(--ink);
+        letter-spacing: 0.02em;
+      }
+
+      .meta {
+        font-size: 13px;
+        color: var(--ink3);
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 56px 0 16px;
+        color: var(--ink);
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h3 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 32px 0 8px;
+        color: var(--ink);
+      }
+
+      p {
+        margin: 12px 0;
+        color: var(--ink2);
+      }
+
+      strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      a {
+        color: var(--accent-deep);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      a:hover {
+        color: var(--accent);
+      }
+
+      ul {
+        padding-left: 1.2em;
+        color: var(--ink2);
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      .divider {
+        height: 1px;
+        background: var(--line);
+        margin: 64px 0;
+        border: none;
+      }
+
+      footer {
+        margin-top: 80px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        font-size: 12px;
+        color: var(--ink3);
+        text-align: center;
+      }
+
+      .contact {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-top: 16px;
+      }
+
+      .contact a {
+        font-weight: 500;
+      }
+
+      .other-apps {
+        margin-top: 96px;
+        padding-top: 32px;
+        border-top: 1px solid var(--line);
+      }
+
+      .other-title {
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        color: var(--ink3);
+        text-transform: uppercase;
+        margin: 0 0 20px;
+        padding: 0;
+        border: none;
+      }
+
+      .app-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .app-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 16px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        text-decoration: none;
+        color: inherit;
+        transition: border-color 0.15s ease, transform 0.15s ease;
+      }
+
+      .app-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-1px);
+      }
+
+      .app-card-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 11px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .app-card-meta {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .app-card-name {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: 2px;
+      }
+
+      .app-card-desc {
+        font-size: 13px;
+        color: var(--ink3);
+        line-height: 1.5;
+      }
+
+      .app-card-arrow {
+        color: var(--ink3);
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+
+      @media (max-width: 480px) {
+        .wrap {
+          padding: 40px 20px 64px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="brand">
+        <img
+          class="mark"
+          src="app-icon.png"
+          alt="Dakke アプリアイコン"
+          width="40"
+          height="40"
+        />
+        <span class="brand-name">Dakke</span>
+        <span class="lang-switch">
+          <a href="#ja">日本語</a>
+          <a href="#en">English</a>
+        </span>
+      </header>
+
+      <section id="ja">
+        <h1>プライバシーポリシー</h1>
+        <div class="meta">最終更新日：2026年8月2日</div>
+
+        <p>
+          「Dakke」（以下「本アプリ」）は、利用者のプライバシーを尊重し、
+          以下の方針で個人情報を取り扱います。
+        </p>
+
+        <h2>1. 取り扱う情報</h2>
+        <p>本アプリは以下の情報を端末内で取り扱います：</p>
+        <ul>
+          <li>
+            利用者が入力した<strong>テキスト</strong>（人の名前・所属・SNS
+            ハンドル・ひとことメモ・イベント名など）
+          </li>
+          <li>
+            利用者が撮影または選択した<strong>写真</strong>（顔・名刺・イベントの写真）
+          </li>
+          <li>
+            利用者が写真に付けた<strong>顔タグ</strong>（写真内の顔の位置）
+          </li>
+          <li><strong>出会いの記録</strong>（会ったイベント名・日時）</li>
+        </ul>
+
+        <h2>2. 情報の保存先</h2>
+        <p>
+          上記の情報はすべて、利用者の端末内および利用者ご自身の
+          <strong>iCloud Private Database</strong>（Apple CloudKit）
+          にのみ保存されます。開発者を含む第三者がこれらのデータにアクセスすることはありません。開発者が運営するサーバーは存在しません。
+        </p>
+        <p>
+          iCloud の同期と保存は Apple が提供するサービスであり、 Apple
+          のプライバシーポリシー（<a
+            href="https://www.apple.com/legal/privacy/"
+            target="_blank"
+            rel="noopener"
+            >apple.com/legal/privacy</a
+          >）に従って取り扱われます。
+        </p>
+
+        <h2>3. 画像処理はすべて端末内で行われます</h2>
+        <p>
+          写真からの<strong>顔の検出</strong>、名刺の<strong>文字認識（OCR）</strong>、画像内テキストの選択（Live
+          Text）は、すべて Apple の Vision / VisionKit
+          フレームワークにより<strong>端末内で実行</strong>されます。写真や認識結果が外部のサーバーへ送信されることはありません。
+        </p>
+
+        <h2>4. 第三者への提供・トラッキング</h2>
+        <p>
+          本アプリは、利用者の情報を第三者に提供しません。
+          広告 SDK、解析 SDK、トラッキング技術を一切使用しません。
+        </p>
+
+        <h2>5. 権限について</h2>
+        <p>
+          本アプリは<strong>カメラへのアクセス権限</strong>を要求しますが、これは名刺や顔を撮影して出会いを記録するためのものです。撮影した写真は端末内と利用者ご自身の
+          iCloud にのみ保存されます。
+        </p>
+        <p>
+          写真の選択には Apple
+          標準の写真ピッカーを使用しており、本アプリがアクセスできるのは<strong>利用者が選択した写真のみ</strong>です。写真ライブラリ全体へのアクセス権限は要求しません。
+        </p>
+        <p>位置情報サービス（CoreLocation）は使用していません。</p>
+
+        <h2>6. データの削除</h2>
+        <p>
+          アプリ内の「設定 →
+          すべてのデータを削除」から、端末内と iCloud
+          上のデータ（人・出会い・写真・顔タグ・SNS）をまとめて削除できます。
+        </p>
+        <p>
+          アプリ自体をアンインストールしても、iCloud
+          内のデータは保持されますが、設定アプリの 「Apple ID → iCloud →
+          ストレージを管理」から手動で削除できます。
+        </p>
+
+        <h2>7. 子どものプライバシー</h2>
+        <p>
+          本アプリは特に子どもを対象としていません。13
+          歳未満の方が利用する場合は、保護者の管理下でご利用ください。
+        </p>
+
+        <h2>8. ポリシーの変更</h2>
+        <p>
+          本ポリシーは、必要に応じて改定されることがあります。
+          重要な変更がある場合は、本ページにて告知します。
+        </p>
+
+        <h2>9. お問い合わせ</h2>
+        <div class="contact">
+          本ポリシーまたは本アプリに関するご質問は、以下までご連絡ください：<br />
+          <a href="mailto:akagamisora@gmail.com">akagamisora@gmail.com</a>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="en">
+        <h1>Privacy Policy</h1>
+        <div class="meta">Last Updated: August 2, 2026</div>
+
+        <p>
+          "Dakke" (the "App") respects your privacy. This policy describes how
+          the App handles your data.
+        </p>
+
+        <h2>1. Data Handled</h2>
+        <p>The App handles the following data on your device:</p>
+        <ul>
+          <li>
+            <strong>Text</strong> you enter (names, affiliations, social media
+            handles, short notes, event names)
+          </li>
+          <li>
+            <strong>Photos</strong> you take or select (faces, business cards,
+            event photos)
+          </li>
+          <li>
+            <strong>Face tags</strong> you add to photos (positions of faces
+            within a photo)
+          </li>
+          <li>
+            <strong>Encounter records</strong> (event names and dates of when
+            you met someone)
+          </li>
+        </ul>
+
+        <h2>2. Where Data Is Stored</h2>
+        <p>
+          All data is stored exclusively on your device and in your personal
+          <strong>iCloud Private Database</strong> (Apple CloudKit). No third
+          party, including the developer, can access this data. The developer
+          operates no servers.
+        </p>
+        <p>
+          iCloud syncing and storage are provided by Apple and governed by
+          Apple's privacy policy (<a
+            href="https://www.apple.com/legal/privacy/"
+            target="_blank"
+            rel="noopener"
+            >apple.com/legal/privacy</a
+          >).
+        </p>
+
+        <h2>3. All Image Processing Happens On-Device</h2>
+        <p>
+          <strong>Face detection</strong>, business card
+          <strong>text recognition (OCR)</strong>, and Live Text are all
+          performed <strong>on your device</strong> using Apple's Vision /
+          VisionKit frameworks. Your photos and recognition results are never
+          sent to any external server.
+        </p>
+
+        <h2>4. Sharing and Tracking</h2>
+        <p>
+          The App does not share your data with third parties. The App does not
+          use any advertising SDKs, analytics SDKs, or tracking technologies.
+        </p>
+
+        <h2>5. Permissions</h2>
+        <p>
+          The App requests <strong>camera access</strong> solely to photograph
+          business cards and faces when recording an encounter. Photos you take
+          are stored only on your device and in your own iCloud.
+        </p>
+        <p>
+          Photo selection uses Apple's standard photo picker, so the App can
+          only access <strong>the photos you explicitly select</strong>. The
+          App never requests access to your entire photo library.
+        </p>
+        <p>The App does not use Location Services (CoreLocation).</p>
+
+        <h2>6. Data Deletion</h2>
+        <p>
+          You can delete all data (people, encounters, photos, face tags,
+          social handles) from both your device and iCloud at once via
+          "Settings → Delete All Data" inside the App.
+        </p>
+        <p>
+          Uninstalling the App alone does not remove data stored in iCloud —
+          you can manually remove it from Settings → Apple ID → iCloud →
+          Manage Storage.
+        </p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>
+          The App is not directed at children. Users under 13 should use the App
+          under the supervision of a parent or guardian.
+        </p>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>
+          We may revise this policy from time to time. Significant changes will
+          be announced on this page.
+        </p>
+
+        <h2>9. Contact</h2>
+        <div class="contact">
+          For questions about this policy or the App, please contact:<br />
+          <a href="mailto:akagamisora@gmail.com">akagamisora@gmail.com</a>
+        </div>
+      </section>
+
+      <section class="other-apps">
+        <h2 class="other-title">Other apps by Akagamisora</h2>
+        <div class="app-list">
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/hitokoma-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/hitokoma-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">ひとこま - 写真と一言の日記</div>
+              <div class="app-card-desc">
+                写真 1 枚と一言、地図で振り返るフォトログ
+              </div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/mannaka-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/mannaka-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">まんなか - 集合駅を公平に提案</div>
+              <div class="app-card-desc">
+                参加者の最寄り駅から、 「ちょうど真ん中」の集合駅を提案
+              </div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/zutto-minesweeper-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/zutto-minesweeper-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">ずっとマインスイーパー</div>
+              <div class="app-card-desc">
+                推測なしで必ず解ける、 終わらない 9×9 マインスイーパー
+              </div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/doitnow-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="app-card-icon"
+              src="https://akagamisora.github.io/doitnow-privacy/app-icon.png"
+              alt=""
+            />
+            <div class="app-card-meta">
+              <div class="app-card-name">
+                Do It Now ! ー 便利じゃない、意味のあるタスク
+              </div>
+              <div class="app-card-desc">36時間で消える、3つだけ。</div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <footer>© 2026 Akagamisora · Dakke</footer>
+    </div>
+  </body>
+</html>
