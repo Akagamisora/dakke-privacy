@@ -235,6 +235,17 @@
         flex-shrink: 0;
       }
 
+      .app-card-icon.is-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--ink2);
+      }
+
       .app-card-meta {
         flex: 1;
         min-width: 0;
@@ -291,7 +302,7 @@
 
       <section id="ja">
         <h1>プライバシーポリシー</h1>
-        <div class="meta">最終更新日：2026年10月6日</div>
+        <div class="meta">最終更新日：2026年10月12日</div>
 
         <p>
           「Dakke」（以下「本アプリ」）は、利用者のプライバシーを尊重し、
@@ -303,7 +314,7 @@
         <ul>
           <li>
             利用者が入力した<strong>テキスト</strong>（人の名前・所属・SNS
-            ハンドル・ひとことメモ・イベント名など）
+            ハンドル・ひとことメモ・タグ・話したこと（会話メモ）・イベント名・会った場所など）
           </li>
           <li>
             利用者が撮影または選択した<strong>写真</strong>（顔・名刺・イベントの写真）
@@ -311,7 +322,7 @@
           <li>
             利用者が写真に付けた<strong>顔タグ</strong>（写真内の顔の位置）と、そこから切り出した<strong>顔の縮小画像</strong>（一覧に表示するため）
           </li>
-          <li><strong>出会いの記録</strong>（会ったイベント名・日時）</li>
+          <li><strong>出会いの記録</strong>（会ったイベント名・場所・日時と、そのとき話したこと）</li>
         </ul>
 
         <h2>2. 情報の保存先</h2>
@@ -329,12 +340,18 @@
             >apple.com/legal/privacy</a
           >）に従って取り扱われます。
         </p>
+        <p>
+          アプリ内の「設定 → iCloud 同期」で、iCloud 同期をオフにできます（切り替えは、アプリを開き直したときから反映されます）。オフの間は、本アプリはこの端末から iCloud へ情報を送りません。オフの間に追加・変更した内容は、あとで同期をオンに戻したときに iCloud へ送られることがあります。オンだった間に iCloud へ保存された情報は、オフにしても削除されません。
+        </p>
 
         <h2>3. 画像処理はすべて端末内で行われます</h2>
         <p>
           写真からの<strong>顔の検出</strong>、名刺の<strong>文字認識（OCR）</strong>、画像内テキストの選択（Live
           Text）は、すべて Apple の Vision / VisionKit
           フレームワークにより<strong>端末内で実行</strong>されます。写真や認識結果が外部のサーバーへ送信されることはありません。
+        </p>
+        <p>
+          バージョン 1.1 以降、写真は保存するときに、撮影日時以外の情報（<strong>位置情報</strong>・機種情報などのメタデータ）を取り除きます。
         </p>
 
         <h2>4. 第三者への提供・トラッキング</h2>
@@ -364,6 +381,9 @@
           上のデータ（人・出会い・写真・顔タグ・SNS）をまとめて削除できます。
         </p>
         <p>
+          iCloud 同期をオフにしている間は、この操作で削除されるのは端末内のデータだけです。iCloud に保存済みのデータは、あとで同期をオンにしたときに削除されることがあります。
+        </p>
+        <p>
           アプリ自体をアンインストールしても、iCloud
           内のデータは保持されますが、設定アプリの 「Apple ID → iCloud →
           ストレージを管理」から手動で削除できます。
@@ -382,6 +402,12 @@
         </p>
 
         <h2>9. お問い合わせ</h2>
+        <p>
+          アプリ内の「設定 → ご意見・ご要望を送る」を押すと、宛先（下記のアドレス）・件名・本文の下書きが入ったメールの作成画面が開きます。本文の下書きには、ご対応のため<strong>アプリのバージョン・iOS のバージョン・機種名</strong>が入ります。これらは下書きに入るだけで、送信前に編集・削除でき、利用者が送信したときにだけ開発者に届きます。本アプリが自動でメールを送ることはなく、記録（人・出会い・写真など）が下書きに入ることもありません。
+        </p>
+        <p>
+          お問い合わせのメールでいただいた情報（メールアドレス・本文・添えていただいた情報）は、お問い合わせへの回答と不具合の調査のためにだけ使います。
+        </p>
         <div class="contact">
           本ポリシーまたは本アプリに関するご質問は、以下までご連絡ください：<br />
           <a href="mailto:akagamisora@gmail.com">akagamisora@gmail.com</a>
@@ -393,7 +419,7 @@
 
       <section id="en">
         <h1>Privacy Policy</h1>
-        <div class="meta">Last Updated: August 2, 2026</div>
+        <div class="meta">Last Updated: October 12, 2026</div>
 
         <p>
           "Dakke" (the "App") respects your privacy. This policy describes how
@@ -405,7 +431,8 @@
         <ul>
           <li>
             <strong>Text</strong> you enter (names, affiliations, social media
-            handles, short notes, event names)
+            handles, short notes, tags, notes on what you talked about, event
+            names, places where you met)
           </li>
           <li>
             <strong>Photos</strong> you take or select (faces, business cards,
@@ -417,8 +444,8 @@
             made from them for display in the list
           </li>
           <li>
-            <strong>Encounter records</strong> (event names and dates of when
-            you met someone)
+            <strong>Encounter records</strong> (the event name, place and date
+            of when you met someone, and what you talked about)
           </li>
         </ul>
 
@@ -438,6 +465,14 @@
             >apple.com/legal/privacy</a
           >).
         </p>
+        <p>
+          You can turn iCloud sync off in "Settings → iCloud Sync" inside the
+          App (the change takes effect the next time you open the App). While
+          sync is off, the App does not send data from this device to iCloud.
+          Anything you add or change while sync is off may be sent to iCloud
+          when you turn sync back on. Data already saved to iCloud while sync was on is not deleted when
+          you turn sync off.
+        </p>
 
         <h2>3. All Image Processing Happens On-Device</h2>
         <p>
@@ -446,6 +481,11 @@
           performed <strong>on your device</strong> using Apple's Vision /
           VisionKit frameworks. Your photos and recognition results are never
           sent to any external server.
+        </p>
+        <p>
+          Since version 1.1, when a photo is saved, the App removes its
+          metadata (such as <strong>location</strong> and device information)
+          except for the date and time it was taken.
         </p>
 
         <h2>4. Sharing and Tracking</h2>
@@ -480,6 +520,11 @@
           "Settings → Delete All Data" inside the App.
         </p>
         <p>
+          While iCloud sync is off, this deletes only the data on your device.
+          Data already saved to iCloud may be deleted when you turn sync back
+          on.
+        </p>
+        <p>
           Uninstalling the App alone does not remove data stored in iCloud —
           you can manually remove it from Settings → Apple ID → iCloud →
           Manage Storage.
@@ -498,6 +543,21 @@
         </p>
 
         <h2>9. Contact</h2>
+        <p>
+          Tapping "Settings → ご意見・ご要望を送る" (Send Feedback) in the App opens an email draft
+          with the recipient (the address below), a subject and a body
+          prefilled. For support purposes, the body includes the
+          <strong>App version, iOS version and device model</strong>. This
+          information is only placed in the draft: you can edit or remove it
+          before sending, and it reaches the developer only if you send the
+          email. The App never sends email on its own, and your records
+          (people, encounters, photos, etc.) are never added to the draft.
+        </p>
+        <p>
+          Information you send by email (your email address, message and any
+          details you include) is used only to respond to your inquiry and to
+          investigate issues.
+        </p>
         <div class="contact">
           For questions about this policy or the App, please contact:<br />
           <a href="mailto:akagamisora@gmail.com">akagamisora@gmail.com</a>
@@ -600,6 +660,19 @@
               <div class="app-card-desc">
                 間に合わせたい時刻まで、その手前から何度でも鳴らす
               </div>
+            </div>
+            <span class="app-card-arrow">→</span>
+          </a>
+          <a
+            class="app-card"
+            href="https://akagamisora.github.io/gamanchokin-privacy/"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="app-card-icon is-text" aria-hidden="true">貯</span>
+            <div class="app-card-meta">
+              <div class="app-card-name">がまん貯金 - 我慢した分だけ貯めてご褒美</div>
+              <div class="app-card-desc">我慢して浮いたお金を貯めて、ごほうびに使う</div>
             </div>
             <span class="app-card-arrow">→</span>
           </a>
